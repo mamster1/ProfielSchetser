@@ -1,0 +1,16 @@
+body {
+  background-color: beige;
+}
+
+div {
+  display: block;
+  background-color: grey;
+  height: 300px;
+  width: 300px;
+  color: beige;
+  text-align: center;
+}
+
+p {
+  padding-top: 20px;
+}
