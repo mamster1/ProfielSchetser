@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+
+  <script>
+    function maakProfiel() {
+      document.getElementById('deNaam').innerHTML = document.getElementById('nieuweNaam').value;
+      document.getElementById('dePlaats').innerHTML = document.getElementById('nieuwePlaats').value;
+      document.getElementById('tekst').innerHTML = document.getElementById('tekstVak').value;
+
+      if (document.getElementById('cbhtml').checked && document.getElementById('cbcss').checked &&
+          document.getElementById('cbjs').checked && document.getElementById('cbphp').checked) {
+          document.getElementById('cbresult').innerHTML = "ik ben een full-stack developer";
+      }
+      else if (document.getElementById('cbhtml').checked && document.getElementById('cbcss').checked) {
+               document.getElementById('cbresult').innerHTML = "ik ben een front-end developer";
+      }
+      else if (document.getElementById('cbphp').checked) {
+               document.getElementById('cbresult').innerHTML = "ik ben een back-end developer";
+      }
+      else {
+        document.getElementById('cbresult').innerHTML = "";
+      }
+    }
+    </script>
+
+  <form onsubmit="maakProfiel(); return false">
+    je naam: <input id="nieuweNaam" type="text"><br>
+    je woonplaats: <input id="nieuwePlaats" type="text"><br>
+    eigen tekst: <textarea id="tekstVak" cols="22" rows="3"></textarea><br>
+    <input id="cbhtml" type="checkbox">HTML<br>
+    <input id="cbcss" type="checkbox">CSS<br>
+    <input id="cbjs" type="checkbox">JavaScript<br>
+    <input id="cbphp" type="checkbox">PHP<br>
+    <input type="submit">
+  </form>
+
+      mijn naam is <b id="deNaam">naam</b> en ik woon in <b id="dePlaats">plaats</b><br>
+      <b id="tekst">eigen tekst</b>
+      <b id="cbresult"></b>
+
+  </body>
+  </html>
